@@ -16,7 +16,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn bg-info">Tambah</button>
             </div>
         </form>
     </div>
@@ -38,10 +38,20 @@
                     <input type="text" class="form-control" id="name" name="name"
                         placeholder="Masukkan nama list">
                 </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">deskripsi</label>
+                    <input type="text" class="form-control" id="description" name="description"
+                        placeholder="Masukkan deskripsi">
+                </div>
+                <select class="form-select form-select-sm" aria-label="Small select example" id="priority" name="priority">
+                    <option value="low">low</option>
+                    <option value="medium" selected>medium</option>
+                    <option value="high">high</option>
+                  </select>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-primary">Tambah</button>
+                <button type="submit" class="btn bg-info">Tambah</button>
             </div>
         </form>
     </div>

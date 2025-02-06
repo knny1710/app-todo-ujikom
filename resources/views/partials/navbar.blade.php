@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-success navbar-light fixed-top">
+<nav class="navbar navbar-expand-lg bg-dark navbar-light fixed-top">
     <div class="container d-flex justify-content-between">
-        <a class="navbar-brand fw-bolder text-white" href="#">MyAppTugas</a>
+        <a class="navbar-brand fw-bolder text-white" href="#">ListTugas</a>
 
      <!-- Search Form, untuk menambahkan fitur cari tugas2 yang diperlukan -->  
         <form class="d-flex w-45 position-relative">

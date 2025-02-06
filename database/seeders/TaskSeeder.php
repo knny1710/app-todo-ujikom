@@ -64,6 +64,20 @@ class TaskSeeder extends Seeder
                 'priority' => 'high',
                 'list_id' => TaskList::where('name', 'Tugas')->first()->id,
             ],
+            [
+                'name' => 'Gery Mang',
+                'description' => 'Sukamelang-Subang',
+                'is_completed' => false,
+                'priority' => 'low',
+                'list_id' => TaskList::where('name', 'Sirkuit')->first()->id,
+            ],
+            [
+                'name' => 'Sentul',
+                'description' => 'Sentul-Bogor',
+                'is_completed' => false,
+                'priority' => 'medium',
+                'list_id' => TaskList::where('name', 'Sirkuit')->first()->id,
+            ],
         ];
 
         Task::insert($tasks);

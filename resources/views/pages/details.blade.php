@@ -1,23 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="content" class="row">
-        <h1 class="mb-3">Halaman Details</h1>
+    <div id="content" class="container pb-3">
+        <div class="d-flex aligh-items-center justify-content center">
+            <a href="{{ route('home') }}" class="btn btn-sm fw-bold fs-4">
+                <i class="bi bi-arrow-left-short"></i>
+                kembali
+            </a>
+        </div>
 
         <div class="row">
             <div class="col-8">
-                <h3 class="mb-2">{{ $task->name }}</h3>
-                <p class="text-muted">{{ $task->description }}</p>
+                <div class="card" style="height: 80vh; max-height: 80vh;">
+                    {{-- kode untuk ukuran lebar panjangnya --}}
+                    <div class="card-header d-flex align items center justify-content-between overflow-hidden">
+                        <h3 class="fw-bold fs-4 text-truncate" style="max-width: 80%;">{{ $task->name }}</h3>
+                        <button class="btn btn-sm">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {{ $task->description }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-outline-danger w-100">
+                            Hapus
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="col-4">
-                <span class="badge text-bg-{{ $task->priorityClass }} badge-pill" style="width: fit-content">
-                    {{ $task->priority }}
-                </span>
-                <span class="badge text-bg-{{ $task->status ? 'success' : 'danger' }} badge-pill"
-                    style="width: fit-content">
-                    {{ $task->status ? 'Selesai' : 'Belum Selesai' }}
-                </span>
+                <div class="card" style="height: 80vh; max-height: 80vh;">
+                    <div class="card"></div>
+                </div>
             </div>
         </div>
+
     </div>
 @endsection

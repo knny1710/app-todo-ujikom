@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function index() {
+    //index() → Mengambil semua daftar tugas dan tugas yang ada untuk ditampilkan di halaman utama.
+    public function index()
+    {
         $data = [
             'title' => 'Home',
             'lists' => TaskList::all(),
@@ -19,7 +21,9 @@ class TaskController extends Controller
         return view('pages.home', $data);
     }
 
-    public function store(Request $request) {
+    //store() → Menyimpan tugas baru ke database.
+    public function store(Request $request)
+    {
         $request->validate([
             'name' => 'required|max:100',
             'list_id' => 'required'
@@ -34,7 +38,9 @@ class TaskController extends Controller
         return redirect()->back();
     }
 
-    public function complete($id) {
+    //complete() → Menandai tugas sebagai selesai (is_completed = true).
+    public function complete($id)
+    {
         Task::findOrFail($id)->update([
             'is_completed' => true
         ]);
@@ -42,9 +48,23 @@ class TaskController extends Controller
         return redirect()->back();
     }
 
-    public function destroy($id) {
-        Task::findOrFail($id)->delete(); 
+    //destroy() → Menghapus tugas berdasarkan ID.
+    public function destroy($id)
+    {
+        Task::findOrFail($id)->delete();
 
         return redirect()->back();
+    }
+
+    public function show($id)
+    {
+        $task = Task::findOrFail($id);
+
+        $data = [
+            'title' => 'Details',
+            'task' => $task,
+        ];
+
+        return view('pages.details', $data);
     }
 }

@@ -30,13 +30,6 @@ class TaskSeeder extends Seeder
                 'list_id' => TaskList::where('name', 'Belajar')->first()->id,
             ],
             [
-                'name' => 'Pantai',
-                'description' => 'Liburan ke Pantai bersama keluarga',
-                'is_completed' => false,
-                'priority' => 'low',
-                'list_id' => TaskList::where('name', 'Liburan')->first()->id,
-            ],
-            [
                 'name' => 'Villa',
                 'description' => 'Liburan ke Villa bersama teman sekolah',
                 'is_completed' => true,

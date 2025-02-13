@@ -26,14 +26,14 @@ class TaskController extends Controller
         return view('pages.home', $data);
     }
 
- // Mengambil input pencarian dari URL (?search=value).
-// Menggunakan query builder when() untuk memfilter daftar list (TaskList) dan task (Task) berdasarkan nama atau deskripsi.
-// Mengurutkan task berdasarkan waktu pembuatan (created_at) dalam urutan menurun (desc).
-// Mengirim data ke view pages.home:
-// title: Judul halaman.
-// lists: Data list yang difilter.
-// tasks: Data task yang difilter.
-// priorities: Prioritas task (diambil dari konstanta model Task::PRIORITIES).
+    // Mengambil input pencarian dari URL (?search=value).
+    // Menggunakan query builder when() untuk memfilter daftar list (TaskList) dan task (Task) berdasarkan nama atau deskripsi.
+    // Mengurutkan task berdasarkan waktu pembuatan (created_at) dalam urutan menurun (desc).
+    // Mengirim data ke view pages.home:
+    // title: Judul halaman.
+    // lists: Data list yang difilter.
+    // tasks: Data task yang difilter.
+    // priorities: Prioritas task (diambil dari konstanta model Task::PRIORITIES).
 
     //store() → Menyimpan tugas baru ke database.
     public function store(Request $request)
@@ -80,5 +80,14 @@ class TaskController extends Controller
         ];
 
         return view('pages.details', $data);
+    }
+    public function dashboard()
+    {
+        return view('partials.dashboard');
+    }
+
+    public function alltask()
+    {
+        return view('partials.alltask');
     }
 }

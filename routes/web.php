@@ -11,3 +11,5 @@ Route::resource('lists', TaskListController::class);
 
 Route::resource('tasks', TaskController::class);
 Route::patch('/tasks/{task}/complete', [TaskController::class, 'complete'])->name('tasks.complete');
+Route::get('/dashboard', [TaskController::class, 'dashboard'])->name('dashboard');
+Route::get('/alltask', [TaskController::class, 'alltask'])->name('alltask');

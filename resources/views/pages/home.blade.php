@@ -4,10 +4,10 @@
     <div id="content" class="overflow-y-hidden overflow-x-hidden">
         @if ($lists->count() == 0)
             <div class="d-flex flex-column align-items-center">
-                <p class="fw-bold text-center">Belum ada tugas yang ditambahkan</p>
+                <p class="fw-bold text-center">Belum ada tugas yang diTambah Tugaskan</p>
                 <button type="button" class="btn btn-sm d-flex align-items-center gap-2 btn-outline-danger"
                     style="width: fit-content;">
-                    <i class="bi bi-plus-square fs-3"></i> Tambah
+                    <i class="bi bi-plus-square fs-3"></i> Tambah Tugas
                 </button>
             </div>
         @endif
@@ -77,7 +77,7 @@
                             data-bs-target="#addTaskModal" data-list="{{ $list->id }}">
                             <span class="d-flex align-items-center justify-content-center">
                                 <i class="bi bi-plus fs-5"></i>
-                                Tambah
+                                Tambah Tugas
                             </span>
                         </button>
                     </div>
@@ -90,7 +90,7 @@
                 data-bs-toggle="modal" data-bs-target="#addListModal">
                 <span class="d-flex align-items-center justify-content-center">
                     <i class="bi bi-plus fs-5"></i>
-                    Tambah
+                    Tambah Tugas
                 </span>
             </button>
         </div>

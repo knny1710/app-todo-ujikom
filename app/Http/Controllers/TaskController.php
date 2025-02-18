@@ -14,17 +14,6 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     //index() → Mengambil semua daftar tugas dan tugas yang ada untuk ditampilkan di halaman utama.
-    public function index()
-    {
-        $data = [
-            'title' => 'Home',
-            'lists' => TaskList::all(),
-            'tasks' => Task::orderBy('created_at', 'desc')->get(),
-            'priorities' => Task::PRIORITIES
-        ];
-
-        return view('pages.home', $data);
-    }
 
     // Mengambil input pencarian dari URL (?search=value).
     // Menggunakan query builder when() untuk memfilter daftar list (TaskList) dan task (Task) berdasarkan nama atau deskripsi.
@@ -89,5 +78,47 @@ class TaskController extends Controller
     public function alltask()
     {
         return view('partials.alltask');
+    }
+
+    public function index(Request $request)
+    {
+        $query = $request->input('query');
+
+        if ($query) {
+            $tasks = Task::where('name', 'like', "%{$query}%")
+                ->orWhere('description', 'like', "%{$query}%")
+                ->latest()
+                ->get();
+
+            $lists = TaskList::where('name', 'like', "%{$query}%")
+                ->orWhereHas('tasks', function ($q) use ($query) {
+                    $q->where('name', 'like', "%{$query}%")
+                        ->orWhere('description', 'like', "%{$query}%");
+                })
+                ->with('tasks')
+                ->get();
+
+
+            if ($tasks->isEmpty()) {
+                $lists->load('tasks');
+            } else {
+                $lists->load(['tasks' => function ($q) use ($query) {
+                    $q->where('name', 'like', "%{$query}%")
+                        ->orWhere('description', 'like', "%{$query}%");
+                }]);
+            }
+        } else {
+            $tasks = Task::latest()->get();
+            $lists = TaskList::with('tasks')->get();
+        }
+
+        $data = [
+            'title' => 'Home',
+            'lists' => $lists,
+            'tasks' => $tasks,
+            'priorities' => Task::PRIORITIES
+        ];
+
+        return view('pages.home', $data);
     }
 }

@@ -9,10 +9,10 @@
           <li class="nav-item">
             <a class="nav-link" href="\dashboard">Profil</a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="\alltask">Tugas</a>
-          </li>
-          <li class="nav-item dropdown">
+          </li> --}}
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Menu
             </a>
@@ -22,8 +22,8 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-        </ul>
-        <div class="ms-auto">
+        </ul> --}}
+        {{-- <div class="ms-auto">
           <input
             type="search"
             class="form-control rounded"
@@ -31,7 +31,7 @@
             aria-label="Search"
             aria-describedby="search-addon"
           />
-        </div>
+        </div> --}}
       </div>
     </div>
   </nav>

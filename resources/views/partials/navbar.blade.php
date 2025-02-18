@@ -1,37 +1,46 @@
+<style>
+  /* Add this CSS to your existing CSS file or within a <style> tag */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Center items vertically */
+  }
+
+  .navbar-brand {
+    flex-grow: 1; /* Allow the brand to take up available space */
+    text-align: center; /* Center the brand text */
+    font-weight: bold; /* Make the brand text bold */
+  }
+
+  .nav-link {
+    font-weight: bold; /* Make the nav link text bold */
+  }
+
+  .social-icons {
+    display: inline-block; /* Aligns icons next to the text */
+    margin-left: 10px; /* Space between text and icons */
+  }
+
+  .social-icons img {
+    width: 32px; /* Set the width of the icons */
+    height: 32px; /* Set the height of the icons */
+    margin-left: 5px; /* Space between icons */
+  }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">My List</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="\dashboard">Profil</a>
-          </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="\alltask">Tugas</a>
-          </li> --}}
-          {{-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menu
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul> --}}
-        {{-- <div class="ms-auto">
-          <input
-            type="search"
-            class="form-control rounded"
-            placeholder="Search"
-            aria-label="Search"
-            aria-describedby="search-addon"
-          />
-        </div> --}}
-      </div>
+  <div class="container-fluid">
+    <div class="navbar-nav">
+      <a class="nav-link" href="\dashboard">About Me</a>
     </div>
-  </nav>
+    <a class="navbar-brand" href="#">My List</a>
+    <div class="social-icons">
+      <a href="https://github.com/knny1710" target="_blank">
+        <img src="assets/img/github.png" alt="Github" />
+      </a>
+      <a href="https://instagram.com/padukasannn" target="_blank">
+        <img src="assets/img/ins.png" alt="Instagram" />
+      </a>
+    </div>
+  </div>
+</nav>

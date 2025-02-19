@@ -31,9 +31,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-danger">
   <div class="container-fluid">
     <div class="navbar-nav">
-      <a class="nav-link" href="\dashboard">About Me</a>
+      <a class="btn btn-light nav-link" href="\dashboard">About Me</a>
     </div>
-    <a class="navbar-brand" href="#">My List</a>
+    <a class="btn btn-light navbar-brand" href="#">My List</a>
     <div class="social-icons">
       <a href="https://github.com/knny1710" target="_blank">
         <img src="assets/img/github.png" alt="Github" />

@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="content" class="container pb-3">
-        <div class="d-flex aligh-items-center justify-content center">
-            <a href="{{ route('home') }}" class="btn btn-sm fw-bold fs-4">
-                <i class="bi bi-arrow-left-short"></i>
-                kembali
+    <div id="content" class="container">
+        {{-- Tombol kembali --}}
+        <div class="d-flex align-items-center">
+            <a href="{{ route('home') }}" class="btn btn-sm">
+                <i class="bi bi-arrow-left-short fs-4"></i>
+                <span class="fw-bold fs-5">Kembali</span>
             </a>
         </div>
 
+          {{-- Alert pada saat ada pesan sukses yang dikirim dari controller yang berupa session --}}
         <div class="row">
             <div class="col-8">
                 <div class="card" style="height: 80vh; max-height: 80vh;">

@@ -75,11 +75,6 @@ class TaskController extends Controller
         return view('partials.dashboard');
     }
 
-    public function alltask()
-    {
-        return view('partials.alltask');
-    }
-
     public function index(Request $request)
     {
         $query = $request->input('query');

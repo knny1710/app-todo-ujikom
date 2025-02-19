@@ -19,16 +19,16 @@ class TaskListSeeder extends Seeder
     {
         $lists = [
             [
-                'name' => 'Liburan',
+                'name' => 'Pekerjaan Rumah',
             ],
             [
                 'name' => 'Belajar',
             ],
             [
-                'name' => 'Tugas',
+                'name' => 'Ujikom',
             ],
             [
-                'name' => 'Sirkuit',
+                'name' => 'WishList Sirkuit',
             ]
             
         ];

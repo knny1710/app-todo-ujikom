@@ -29,7 +29,7 @@
             {{-- Tampilan list --}}
             @foreach ($lists as $list)
                 <div class="card flex-shrink-0 blur-lg"
-                    style="background: rgba(255, 255, 255, 0.4); width: 18rem; max-height: 80vh; box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);">
+                    style="background: rgba(255, 255, 255, 0.4); width: 18rem; max-height: 80vh; box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);">
                     <div class="card-header d-flex align-items-center justify-content-between">
                         <h4 class="card-title">{{ $list->name }}</h4> {{-- Nama list --}}
                         {{-- Tombol untuk menghapus list --}}
